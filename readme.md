@@ -34,75 +34,75 @@ database_path='/mydirectory/peasant/databases'
 ## Usage: peasant.py [assembly options] [filter options] [database] [homology options] -o output_path
 
 
-**assembly options:**
-  -a {spades}, --assembler {spades}
-      Assembly methods:
-            spades: spades assembler
-
-
-  -A <filename>, --assembled_contigs <filename>
-      This will start analysis from an existing assembly/ multi-FASTA format file.
-
-
-  -s <filename>, --single_reads <filename>
-      Single reads file (FASTA or FASTQ).
-  -p <filename> <filename>, --paired_end_reads <filename> <filename>
-      Paired-end read files. List both read files (FASTA or FASTQ).
+**assembly options:**  
+  -a {spades}, --assembler {spades}  
+      Assembly methods:  
+            spades: spades assembler  
+  
+  
+  -A <filename>, --assembled_contigs <filename>  
+      This will start analysis from an existing assembly/ multi-FASTA format file.  
+  
+  
+  -s <filename>, --single_reads <filename>  
+      Single reads file (FASTA or FASTQ).  
+  -p <filename> <filename>, --paired_end_reads <filename> <filename>  
+      Paired-end read files. List both read files (FASTA or FASTQ).  
  
-**filter options:**
-  -m <int>, --min_contig_size <int>
-      Minimum contig size.
-
-
-  -M <int>, --max_contig_size <int>
-      Maximum contig size.
-
-
-  -c <int>, --min_coverage <int>
-      Minimum coverage.
-
-
-  -cov <float>, --min_SPAdes_cov <float>
-      Minimum SPAdes cov value.
- 
-**database options:**
-  -g <filename>, --genus <filename>
-      Genus name to use for annotation. To consider more than one genus, list genus name (space separator). (required)
-
-
-homology options:
-  -q <float>, --qcov <float>
-      Minimum query coverage to call homologous genes. Default=70.0.
-
-
-  -i <float>, --pident <float>
-      Minimum percent identity to call homologous genes. Default=70.0.
-
-
-  -b <float>, --bitscore <float>
-      Minimum bitscore to call homologous genes. Default=50.0.
-
-
-other options:
- -o <directory>, --output_path <directory>
-      Directory to store all the resulting files (required)
-
-
-  -t <int>, --num_threads <int>
-      Number of processors to use. (default=1)
-
-
-  -h, --help
-      Shows help message and exits.
-
-
-  --version
-      Show program's version number and exits.
-
-
-
-
-## Example:
+**filter options:**  
+  -m <int>, --min_contig_size <int>  
+      Minimum contig size.  
+  
+  
+  -M <int>, --max_contig_size <int>  
+      Maximum contig size.  
+  
+  
+  -c <int>, --min_coverage <int>  
+      Minimum coverage.  
+  
+  
+  -cov <float>, --min_SPAdes_cov <float>  
+      Minimum SPAdes cov value.  
+   
+**database options:**  
+  -g <filename>, --genus <filename>  
+      Genus name to use for annotation. To consider more than one genus, list genus name (space separator). (required)  
+  
+  
+**homology options:**  
+  -q <float>, --qcov <float>  
+      Minimum query coverage to call homologous genes. Default=70.0.  
+  
+  
+  -i <float>, --pident <float>  
+      Minimum percent identity to call homologous genes. Default=70.0.  
+  
+  
+  -b <float>, --bitscore <float>  
+      Minimum bitscore to call homologous genes. Default=50.0.  
+  
+  
+**other options:**  
+ -o <directory>, --output_path <directory>  
+      Directory to store all the resulting files (required)  
+  
+  
+  -t <int>, --num_threads <int>  
+      Number of processors to use. (default=1)  
+  
+  
+  -h, --help  
+      Shows help message and exits.  
+  
+  
+  --version  
+      Show program's version number and exits.  
+  
+  
+  
+  
+##Example:  
 Let’s say I have paired-end reads R1 and R2. They are for the genome of a novel E. coli species isolated in the lab. I want to output my results to a folder my_output.
   
 `python peasant.py -a spades -p /mydirectory/R1.fastq /mydirectory/R2.fastq -g Escherichia -o /mydirectory/my_output`
@@ -130,8 +130,6 @@ Let’s say I’m most interested in finding sequences that are of a certain siz
 
 I can filter based upon the SPAdes k-mer coverage value (-cov / --min_SPAdes_cov) if the assembly is done using SPAdes. I can also filter for base coverage (-c / --min_coverage). Following up on the example above, I’d like only those contigs with a SPAdes k-mer coverage value > 10.  
 `python peasant.py -a spades -p /mydirectory/R1.fastq /mydirectory/R2.fastq -m 20000 -M 80000 -cov 10 -g Escherichia -o /mydirectory/my_output3`
-
-
 
 
 Single end reads can also be considered:  
