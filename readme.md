@@ -124,27 +124,27 @@ log.txt: Log file generated. Includes information about parameters, results of f
 
 
 
-Let’s say I’m most interested in finding sequences that are of a certain size, say 20K-80K, I can revise my above function call as follows:
-python peasant.py -a spades -p /mydirectory/R1.fastq /mydirectory/R2.fastq -m 20000 -M 80000 -g Escherichia -o /mydirectory/my_output2
+Let’s say I’m most interested in finding sequences that are of a certain size, say 20K-80K, I can revise my above function call as follows:  
+`python peasant.py -a spades -p /mydirectory/R1.fastq /mydirectory/R2.fastq -m 20000 -M 80000 -g Escherichia -o /mydirectory/my_output2`
 
 
-I can filter based upon the SPAdes k-mer coverage value (-cov / --min_SPAdes_cov) if the assembly is done using SPAdes. I can also filter for base coverage (-c / --min_coverage). Following up on the example above, I’d like only those contigs with a SPAdes k-mer coverage value > 10.
-python peasant.py -a spades -p /mydirectory/R1.fastq /mydirectory/R2.fastq -m 20000 -M 80000 -cov 10 -g Escherichia -o /mydirectory/my_output3
+I can filter based upon the SPAdes k-mer coverage value (-cov / --min_SPAdes_cov) if the assembly is done using SPAdes. I can also filter for base coverage (-c / --min_coverage). Following up on the example above, I’d like only those contigs with a SPAdes k-mer coverage value > 10.  
+`python peasant.py -a spades -p /mydirectory/R1.fastq /mydirectory/R2.fastq -m 20000 -M 80000 -cov 10 -g Escherichia -o /mydirectory/my_output3`
 
 
 
 
-Single end reads can also be considered:
-python peasant.py -a spades -s /mydirectory/myReads.fastq -g Escherichia -o /mydirectory/my_output3
+Single end reads can also be considered:  
+`python peasant.py -a spades -s /mydirectory/myReads.fastq -g Escherichia -o /mydirectory/my_output3`
 
 
-If you’re not sure which taxa would be best to annotate your genome, you can select more than one, e.g.,
-python peasant.py -a spades -p /mydirectory/R1.fastq /mydirectory/R2.fastq -g Escherichia Salmonella Shigella -o /mydirectory/my_output4
+If you’re not sure which taxa would be best to annotate your genome, you can select more than one, e.g.,  
+`python peasant.py -a spades -p /mydirectory/R1.fastq /mydirectory/R2.fastq -g Escherichia Salmonella Shigella -o /mydirectory/my_output4`
 
 
-I can also create my own repository (blast database) for annotation, e.g.,
-python peasant.py -a spades -p /mydirectory/R1.fastq /mydirectory/R2.fastq -g myTaxa -o /mydirectory/my_output5
+I can also create my own repository (blast database) for annotation, e.g.,  
+`python peasant.py -a spades -p /mydirectory/R1.fastq /mydirectory/R2.fastq -g myTaxa -o /mydirectory/my_output5`
 
 
-I can also provide an assembly. Let’s say it’s a file called myAssembly.fasta. Just as if I were going to run the assembly here, I can also include filters. Note, the SPAdes k-mer coverage value (cov) cannot be used if the assembly file is provided. The base coverage (-c / --min_coverage) can be used but only if reads are provided.
-python peasant.py -A /mydirectory/myAssembly.fasta -p /mydirectory/R1.fastq /mydirectory/R2.fastq -c 10 -g Escherichia -o /mydirectory/my_output6
+I can also provide an assembly. Let’s say it’s a file called myAssembly.fasta. Just as if I were going to run the assembly here, I can also include filters. Note, the SPAdes k-mer coverage value (cov) cannot be used if the assembly file is provided. The base coverage (-c / --min_coverage) can be used but only if reads are provided.   
+`python peasant.py -A /mydirectory/myAssembly.fasta -p /mydirectory/R1.fastq /mydirectory/R2.fastq -c 10 -g Escherichia -o /mydirectory/my_output6`
