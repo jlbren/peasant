@@ -1,7 +1,7 @@
-#peasant 1.0 Manual
+# peasant 1.0 Manual
 
 
-##Dependencies: 
+## Dependencies: 
 The following software must be installed and be included in the PATH.
 1. Operating System: UNIX/Mac OSX
 2. GCC Compiler: http://gcc.gnu.org/
@@ -20,7 +20,7 @@ All binaries directories must be added to system PATH.
 
 
 *********************************************************************************************
-##Setup/Install:
+## Setup/Install:
 The script g3-iterated-viral.csh should be located in the same folder as peasant.py. Note, this script includes 3 paths which must be set upon installation. It must also be an executable.
 
 
@@ -31,7 +31,7 @@ database_path='/mydirectory/peasant/databases'
 *********************************************************************************************
 
 
-##usage: peasant.py [assembly options] [filter options] [database] [homology options] -o output_path
+## Usage: peasant.py [assembly options] [filter options] [database] [homology options] -o output_path
 
 
 assembly options:
@@ -102,7 +102,7 @@ other options:
 
 
 
-Example:
+## Example:
 Let’s say I have paired-end reads R1 and R2. They are for the genome of a novel E. coli species isolated in the lab. I want to output my results to a folder my_output.
 python peasant.py -a spades -p /mydirectory/R1.fastq /mydirectory/R2.fastq -g Escherichia -o /mydirectory/my_output
 
