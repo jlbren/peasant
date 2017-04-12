@@ -34,7 +34,7 @@ database_path='/mydirectory/peasant/databases'
 ## Usage: peasant.py [assembly options] [filter options] [database] [homology options] -o output_path
 
 
-assembly options:
+**assembly options:**
   -a {spades}, --assembler {spades}
       Assembly methods:
             spades: spades assembler
@@ -49,7 +49,7 @@ assembly options:
   -p <filename> <filename>, --paired_end_reads <filename> <filename>
       Paired-end read files. List both read files (FASTA or FASTQ).
  
-filter options:
+**filter options:**
   -m <int>, --min_contig_size <int>
       Minimum contig size.
 
@@ -65,7 +65,7 @@ filter options:
   -cov <float>, --min_SPAdes_cov <float>
       Minimum SPAdes cov value.
  
-database options:
+**database options:**
   -g <filename>, --genus <filename>
       Genus name to use for annotation. To consider more than one genus, list genus name (space separator). (required)
 
@@ -104,7 +104,7 @@ other options:
 
 ## Example:
 Let’s say I have paired-end reads R1 and R2. They are for the genome of a novel E. coli species isolated in the lab. I want to output my results to a folder my_output.
-python peasant.py -a spades -p /mydirectory/R1.fastq /mydirectory/R2.fastq -g Escherichia -o /mydirectory/my_output
+`python peasant.py -a spades -p /mydirectory/R1.fastq /mydirectory/R2.fastq -g Escherichia -o /mydirectory/my_output`
 
 
 
