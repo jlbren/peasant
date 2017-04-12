@@ -104,6 +104,7 @@ other options:
 
 ## Example:
 Let’s say I have paired-end reads R1 and R2. They are for the genome of a novel E. coli species isolated in the lab. I want to output my results to a folder my_output.
+  
 `python peasant.py -a spades -p /mydirectory/R1.fastq /mydirectory/R2.fastq -g Escherichia -o /mydirectory/my_output`
 
 
