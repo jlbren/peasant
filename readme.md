@@ -27,6 +27,8 @@ The script g3-iterated-viral.csh should be located in the same folder as peasant
 The peasant.py script must be modified by the user to set the path where the annotation databases are located:  
 `database_path='/mydirectory/peasant/databases'`
 
+Download the RNA databases from github: rna_databases.tar file and put (uncompressed) in your database_path folder.
+Precompiled bacteria databases for annotation are publicly available online at: https://drive.google.com/drive/folders/0B3MjIo6BB7_1NGZTN3l4WXl5VEE?usp=sharing.
 
 *********************************************************************************************
 
