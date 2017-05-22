@@ -17,7 +17,7 @@ The following software must be installed and be included in the PATH.
 2. BBMap: https://sourceforge.net/projects/bbmap/
    1. JAVA v6+: https://www.java.com/en/download/ie_manual.jsp?locale=en  
 
-All binaries directories must be added to system PATH.
+All binaries' directories must be added to system PATH.
 
 
 *********************************************************************************************
