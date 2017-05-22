@@ -15,7 +15,8 @@ The following software must be installed and be included in the PATH.
    1. ELPH: http://www.cbcb.umd.edu/software/ELPH/
 1. BLAST+ Binaries: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
 2. BBMap: https://sourceforge.net/projects/bbmap/
-   1. JAVA v6+: https://www.java.com/en/download/ie_manual.jsp?locale=en
+   1. JAVA v6+: https://www.java.com/en/download/ie_manual.jsp?locale=en  
+
 All binaries directories must be added to system PATH.
 
 
