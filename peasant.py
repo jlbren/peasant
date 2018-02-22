@@ -815,7 +815,8 @@ def predict_function(output_path,database_path,database_name):
 
 #run tRNA
 def run_tRNA(contig_file,output_path):
-    trnascan_command='tRNAscan-SE -B '+contig_file+' -o '+output_path+'/tRNAscan-SE_output.txt'
+    #trnascan_command='tRNAscan-SE -B '+contig_file+' -o '+output_path+'/tRNAscan-SE_output.txt'
+    trnascan_command='tRNAscan-SE -o '+output_path+'/tRNAscan-SE_output.txt -B '+contig_file
     print(trnascan_command)
     os.system(trnascan_command)
 
