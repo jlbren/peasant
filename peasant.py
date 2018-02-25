@@ -409,7 +409,7 @@ def calc_coverage_stats(output_path,contig_file,type_reads,reads):
     if type_reads=='pe':
         if calculate_coverage(output_path,contig_file,type_reads,reads[0],reads[1])==True:
             shutil.copyfile(output_path+'/temp/covstats.txt',output_path+'/covstats.txt')
-            log('Coverage statistics written to: '+output_path+'/covstats.txt',output_path+'/log.txt\n')
+            log('Coverage statistics written to: '+output_path+'/covstats.txt',output_path+'/log.txt')
     else:
         if calculate_coverage(output_path,contig_file,type_reads,reads[0])==True:
             shutil.copyfile(output_path+'/temp/covstats.txt',output_path+'/covstats.txt')
